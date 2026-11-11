@@ -29,7 +29,9 @@ Esses parâmetros podem ser informados de duas formas:
 - Datas completas no formato YYYYMMDD.
 
 Exemplo de código para a leitura e filtragem de período temporal por índice relativo.
+
 .. code-block:: python
+
   import besm.CPTEC_BESM as BESM
   besm = BESM.model()
   #### Brazilian Earth System Model - ATMOS (TQ0062L042) #####
