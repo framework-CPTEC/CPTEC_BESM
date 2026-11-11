@@ -120,6 +120,19 @@ Exemplo: ``--prefix MEUARQUIVO``
 
 Exemplo: ``--path ./dados``
 
+- ``--frequency {day,month,all}``
+
+  Define a frequência de geração dos arquivos NetCDF.
+
+  - ``day``: um arquivo por dia.
+  - ``month``: um arquivo por mês.
+  - ``all``: todos os dados em um único arquivo.
+
+  Valor padrão: day.
+
+  Pode ser utilizado em conjunto com ``--prefix`` e ``--path`` para personalizar o nome e o local de armazenamento dos arquivos.
+
+
 Exemplos de uso
 ---------------
 
