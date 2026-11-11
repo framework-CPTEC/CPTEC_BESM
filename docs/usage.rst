@@ -55,13 +55,14 @@ Dessa forma:
 
 As opções ``--date``, ``--start`` e ``--end`` permitem definir a condição inicial do modelo e o período de dados que será carregado.
 
-- **``--date``, ``-d DATE``**: define a data de inicialização do modelo, no formato `YYYYMMDD` ou `YYYYMMDDHH`. Essa data identifica a condição inicial (*initial condition*) utilizada na execução do modelo.
-- **`--start`, `-s START`**: define o início do período de dados a ser carregado. Pode receber um valor inteiro, entre `0` e `395`, representando o número de dias ou passos relativos à inicialização, ou uma data explícita no formato `YYYYMMDD` ou `YYYYMMDDHH`. O valor `0` corresponde à própria data de inicialização do modelo.
-- **``--end``, ``-r END``**: define o final do período de dados a ser carregado. Aceita valores entre `0` e `395`, relativos à data de inicialização, ou uma data explícita no formato `YYYYMMDD` ou `YYYYMMDDHH`.
+- ``--date``, ``-d DATE``: define a data de inicialização do modelo, no formato `YYYYMMDD` ou `YYYYMMDDHH`. Essa data identifica a condição inicial (*initial condition*) utilizada na execução do modelo.
+- `--start`, `-s START`: define o início do período de dados a ser carregado. Pode receber um valor inteiro, entre `0` e `395`, representando o número de dias ou passos relativos à inicialização, ou uma data explícita no formato `YYYYMMDD` ou `YYYYMMDDHH`. O valor `0` corresponde à própria data de inicialização do modelo.
+- ``--end``, ``-r END``: define o final do período de dados a ser carregado. Aceita valores entre `0` e `395`, relativos à data de inicialização, ou uma data explícita no formato `YYYYMMDD` ou `YYYYMMDDHH`.
 
 Quando ``--start`` e ``--end`` são informados como valores numéricos, eles representam o intervalo relativo à data de inicialização do modelo. Por exemplo, ``--start 0 --end 10`` seleciona o período desde a inicialização até 10 dias após essa data.
 
-#### Exemplos de uso
+Exemplos de uso
+---------------
 
 **1. Informando o período por datas**
 
@@ -85,7 +86,8 @@ Também é possível definir o intervalo em relação à inicialização do mode
 
 Nesse caso, os dados são carregados desde a data de inicialização (10/11/2026) até 10 dias após essa data.
 
-#### Valores padrão
+Valores padrão
+--------------
 
 Caso as opções não sejam informadas, o comando utiliza os seguintes valores padrão:
 
@@ -94,6 +96,15 @@ Caso as opções não sejam informadas, o comando utiliza os seguintes valores p
 | ``--date``   | Data atual             |  Data de inicialização do modelo |
 | ``--start``  | Data da análise        | Início do período de dados       |
 | ``--end``    | 10 dias após a análise | Final do período de dados        |
+
+
+| Item              | In Stock | Price |
+| :---------------- | :------: | ----: |
+| Python Hat        |   True   | 23.99 |
+| SQL Hat           |   True   | 23.99 |
+| Codecademy Tee    |  False   | 19.99 |
+| Codecademy Hoodie |  False   | 42.99 |
+
 
 
 Assim, é possível executar o comando sem informar essas opções, utilizando automaticamente as datas padrão:
