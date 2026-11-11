@@ -9,7 +9,7 @@ A interface de linha de comando (CLI) é uma forma de interagir com programas di
 
 - **[Conda]** → `conda install pacote`
 
-- **[Pip]** → `pip install cptec-monan`
+- **[Pip]** → `pip install cptec-besm`
 
 - **BESM (via CLI)** → `besm_load -d 20261110`
 
@@ -17,7 +17,7 @@ A interface de linha de comando (CLI) é uma forma de interagir com programas di
 Opções do CLI besm_load
 -----------------------
 
-O comando `besm_load` é a interface de linha de comando para acessar e baixar dados do **BESM**. Após a instalação do pacote, o comando fica automaticamente disponível no ambiente de instalação, permitindo que seja executado diretamente no terminal.
+O comando `besm_load` é a interface de linha de comando para acessar e baixar dados do **BESM - Componente Atmosférico**. Após a instalação do pacote, o comando fica automaticamente disponível no ambiente de instalação, permitindo que seja executado diretamente no terminal.
 
 Ele oferece um conjunto completo de parâmetros que permitem configurar data da **rodada**, **intervalo temporal de interesse**, **variáveis e níveis atmosféricos**, **recortes espaciais (shapes)** e **opções de saída**.
 
@@ -44,26 +44,26 @@ Controle do período temporal
 
   Define a data inicial do período a ser carregado.
 
-  Pode ser informada como:
+Pode ser informada como:
 
-  índice temporal (ex.: 0)
-  data completa no formato YYYYMMDD
+- índice temporal (ex.: 0)
+- data completa no formato YYYYMMDD
 
-- ``--end END, -r END``
+- ``--end END, -e END``
 
   Define a data final do período a ser carregado.
 
 Pode ser informada como:
 
 - índice temporal (ex.: 10)
-- data completa no formato YYYYMMDDHH
+- data completa no formato YYYYMMDD
 
 Variáveis e níveis
 ------------------
 
 - ``--var VAR [VAR ...], -v VAR [VAR ...]``
 
-Variáveis a carregar.
+  Variáveis a carregar.
 
 Exemplo: ``--var t2mt atmt``
 
@@ -127,18 +127,17 @@ Exemplos de uso
 
 .. code-block:: shell
 
-  besm_load --date 2026092800 --var t2mt prect --start 0 --end 12 --shape estados_sp
+  besm_load --date 20261110 --var t2mt prect --start 0 --end 12 --shape estados_sp
 
 **Baixar variáveis de niveis (1000/850)**
 
 .. code-block:: shell
 
-  besm_load --date 2026092800 --var atmt shum --level 1000 850 --start 0 --end 12
+  besm_load --date 20261110 --var atmt shum --level 1000 850 --start 0 --end 12
 
-Definir período usando datas completas
 
 .. code-block:: shell
-  besm_load --date 20260928--var t2mt --start 20260101 --end 20261231
+  besm_load --date 20261110--var t2mt --start 20260101 --end 20261231
 
 
 .. warning::
@@ -147,6 +146,6 @@ Definir período usando datas completas
 
 .. warning::
 
-  --date 20260928 - Trocar por uma data disponível ou consultar as datas existentes no Dataserver do CPTEC.
+  ``--date 20261110`` - Trocar por uma data disponível ou consultar as datas existentes no Dataserver do CPTEC.
 
   
