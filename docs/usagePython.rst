@@ -56,7 +56,7 @@ Exemplo de código para a leitura e filtragem de período temporal por índice r
   20261120: 0.07 MB, Time: 4.60s, Speed: 0.02 MB/s                                                                                                       
   20261121: 0.07 MB, Time: 4.60s, Speed: 0.02 MB/s                                                                                                       
   Download total: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 737k/737k [00:46<00:00, 16.0kB/s]
-  >>> f
+  f
   <xarray.Dataset> Size: 740kB
   Dimensions:  (time: 10, lat: 96, lon: 192)
   Coordinates:
@@ -65,7 +65,6 @@ Exemplo de código para a leitura e filtragem de período temporal por índice r
   * lon      (lon) float64 2kB 0.0 1.875 3.75 5.625 ... 352.5 354.4 356.2 358.1
   Data variables:
     TSMT     (time, lat, lon) float32 737kB dask.array<chunksize=(1, 96, 192), meta=np.ndarray>
-  >>> 
 
 
 **Explicação do exemplo**
