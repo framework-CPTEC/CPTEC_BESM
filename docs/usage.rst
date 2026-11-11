@@ -4,7 +4,7 @@ Como Usar
 Acesso aos dados do BESM (Modelo Brasileiro do Sistema Terrestre).
 ------------------------------------------------------------------
 
-Na nova versão dos pacotes de distribuição dos **Modelos Numéricos BESM**, oferecemos duas formas de acessar, filtrar e receber os dados:
+Na nova versão dos pacotes de distribuição dos **Modelos Numéricos BESM - Componente Atmosférico**, oferecemos duas formas de acessar, filtrar e receber os dados:
 
 - `Interface de Linha de Comando (CLI) <usageCLI.html>`_ 
   - a maneira mais recente e prática, permitindo interação direta com o sistema.
