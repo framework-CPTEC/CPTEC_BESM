@@ -1,20 +1,24 @@
 Biblioteca Python
+=================
 
-A biblioteca Python é a forma tradicional de acessar os dados do BESM (Brazilian Earth System Model) diretamente em scripts e aplicações Python.
+- **[Biblioteca Python])**  
+  O método tradicional,  de acessar os dados do BESM (Brazilian Earth System Model) diretamente em scripts e aplicações Python.
 
-Ela permite consultar variáveis disponíveis, níveis atmosféricos, áreas de recorte geográfico e carregar séries temporais do modelo de forma simples e integrada ao ambiente científico Python.
+  Ela permite consultar variáveis disponíveis, níveis atmosféricos, áreas de recorte geográfico e carregar séries temporais do modelo de forma simples e integrada ao ambiente científico Python.
 
 .. warning::
 
-Alterar a data para os valores exibidos na inicialização do modelo.
+  Alterar a data para os valores exibidos na inicialização do modelo.
 
 .. note::
 
 Data de Inicialização do BESM
+-----------------------------
 
 Para saber mais detalhes sobre o uso da opção date, consulte a documentação sobre disponibilidade de dados do BESM no Dataserver do CPTEC.
 
 Período Temporal
+----------------
 
 O BESM utiliza um intervalo temporal definido pelos parâmetros start e end.
 

@@ -33,11 +33,6 @@ Horários de inicialização do modelo BESM
 
   **date = 'YYYYMMDD' ou date = 'YYYYMMDDHH'**
 
-.. note::
-
-  Caso não informar **HH** - usa o default **00 UTC**
-
-  Caso não informar a opção **date** usa a data atual como default
 
 .. warning::
 
@@ -52,19 +47,19 @@ A contagem dos *steps* começa em `0`, que corresponde à data e ao horário de 
 
 Dessa forma:
 
-- `--start 0` seleciona a saída correspondente à condição inicial do modelo.
-- `--start 1` seleciona a previsão para 24 horas após a inicialização.
-- `--start 2` seleciona a previsão para 48 horas após a inicialização.
-- `--end 10` define o limite final do período em 10 dias de previsão (240 horas após a inicialização).
+- ``--start 0`` seleciona a saída correspondente à condição inicial do modelo.
+- ``--start 1`` seleciona a previsão para 24 horas após a inicialização.
+- ``--start 2`` seleciona a previsão para 48 horas após a inicialização.
+- ``--end 10`` define o limite final do período em 10 dias de previsão (240 horas após a inicialização).
 
 
-As opções `--date`, `--start` e `--end` permitem definir a condição inicial do modelo e o período de dados que será carregado.
+As opções ``--date``, ``--start`` e ``--end`` permitem definir a condição inicial do modelo e o período de dados que será carregado.
 
-- **`--date`, `-d DATE`**: define a data de inicialização do modelo, no formato `YYYYMMDD` ou `YYYYMMDDHH`. Essa data identifica a condição inicial (*initial condition*) utilizada na execução do modelo.
+- **``--date``, ``-d DATE``**: define a data de inicialização do modelo, no formato `YYYYMMDD` ou `YYYYMMDDHH`. Essa data identifica a condição inicial (*initial condition*) utilizada na execução do modelo.
 - **`--start`, `-s START`**: define o início do período de dados a ser carregado. Pode receber um valor inteiro, entre `0` e `395`, representando o número de dias ou passos relativos à inicialização, ou uma data explícita no formato `YYYYMMDD` ou `YYYYMMDDHH`. O valor `0` corresponde à própria data de inicialização do modelo.
-- **`--end`, `-r END`**: define o final do período de dados a ser carregado. Aceita valores entre `0` e `395`, relativos à data de inicialização, ou uma data explícita no formato `YYYYMMDD` ou `YYYYMMDDHH`.
+- **``--end``, ``-r END``**: define o final do período de dados a ser carregado. Aceita valores entre `0` e `395`, relativos à data de inicialização, ou uma data explícita no formato `YYYYMMDD` ou `YYYYMMDDHH`.
 
-Quando `--start` e `--end` são informados como valores numéricos, eles representam o intervalo relativo à data de inicialização do modelo. Por exemplo, `--start 0 --end 10` seleciona o período desde a inicialização até 10 dias após essa data.
+Quando ``--start`` e ``--end`` são informados como valores numéricos, eles representam o intervalo relativo à data de inicialização do modelo. Por exemplo, ``--start 0 --end 10`` seleciona o período desde a inicialização até 10 dias após essa data.
 
 #### Exemplos de uso
 
@@ -72,12 +67,10 @@ Quando `--start` e `--end` são informados como valores numéricos, eles represe
 
 É possível informar diretamente as datas de início e fim do período:
 
-```bash
-besm_load --var t2mt \
-          --date 20261110 \
-          --start 20261110 \
-          --end 20261111
-```
+.. code-block:: console
+
+  besm_load --var t2mt --date 20261110 --start 20261110 --end 20261111
+
 
 Nesse exemplo, são carregados os dados da variável `t2mt`, considerando a inicialização do modelo em 10/11/2026 e o período entre 10/11/2026 e 11/11/2026.
 
@@ -85,12 +78,10 @@ Nesse exemplo, são carregados os dados da variável `t2mt`, considerando a inic
 
 Também é possível definir o intervalo em relação à inicialização do modelo:
 
-```bash
-besm_load --var t2mt \
-          --date 20261110 \
-          --start 0 \
-          --end 10
-```
+.. code-block:: console
+
+  besm_load --var t2mt --date 20261110 --start 0 --end 10
+
 
 Nesse caso, os dados são carregados desde a data de inicialização (10/11/2026) até 10 dias após essa data.
 
@@ -98,16 +89,18 @@ Nesse caso, os dados são carregados desde a data de inicialização (10/11/2026
 
 Caso as opções não sejam informadas, o comando utiliza os seguintes valores padrão:
 
-| Opção | Valor padrão | Descrição |
-|---|---|---|
-| `--date` | Data atual | Data de inicialização do modelo |
-| `--start` | Data da análise | Início do período de dados |
-| `--end` | 10 dias após a análise | Final do período de dados |
+| Opção        | Valor padrão           | Descrição                        |
+|--------------|------------------------|----------------------------------|
+| ``--date``   | Data atual             |  Data de inicialização do modelo |
+| ``--start``  | Data da análise        | Início do período de dados       |
+| ``--end``    | 10 dias após a análise | Final do período de dados        |
+
 
 Assim, é possível executar o comando sem informar essas opções, utilizando automaticamente as datas padrão:
 
-```bash
-besm_load --var t2mt
-```
+.. code-block:: console
 
-**Observação:** os valores relativos de `--start` e `--end` devem estar entre `0` e `395`, respeitando o período de dados disponível para a inicialização selecionada.
+  besm_load --var t2mt
+
+
+**Observação:** os valores relativos de ``--start`` e ``--end`` devem estar entre `0` e `395`, respeitando o período de dados disponível para a inicialização selecionada.
