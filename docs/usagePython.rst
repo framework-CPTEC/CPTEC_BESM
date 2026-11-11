@@ -32,20 +32,11 @@ Exemplo de código para a leitura e filtragem de período temporal por índice r
 
 >>> import besm.CPTEC_BESM as BESM
 >>> besm = BESM.model()
-
 #### Brazilian Earth System Model - ATMOS (TQ0062L042) #####
-
---------------------
 Forecast data available for reading between 20261101 and 20261111.
-
---------------------
 Surface variables: ['topo', 'lsmk', 'amdl', 'amsl', 'ussl', 'uzrs', 'uzds', 'psmt', 'usmt', 'vsmt', 'spmt', 'tsmt', 'rsmt', 'pcmt', 'prec', 'prcv', 'neve', 'rnof', 'pitp', 'cssf', 'clsf', 'evap', 'cbnv', 'olis', 'oles', 'role', 'iswf', 'ocis', 'oces', 'roce', 'swae', 'ocas', 'olic', 'lwtc', 'ocic', 'swgc', 'swtc', 'saea', 'nlwb', 'tdst', 'tgsc', 'tcas', 't2mt', 'q2mt', 'u10t', 'v10t', 'w100', 'd100'].
-
 Level variables:   ['uvmt', 'vvmt', 'ghmt', 'atmt', 'rhmt', 'shmt', 'omtm', 'lwrh', 'swrh', 'cvlh', 'cvms', 'vdcc', 'tke2'].
-
---------------------
 levels (hPa): ['1000', '925', '850', '775', '700', '500', '400', '300', '250', '200', '150', '100', '70', '50', '30', '20', '10', '3'].
---------------------
 >>> f = besm.load(start=0, end=10)
 Building request
 Start: 20261111 - End: 20261121
