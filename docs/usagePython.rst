@@ -71,7 +71,7 @@ Exemplo de código para a leitura e filtragem de período temporal por índice r
 
 Neste exemplo, o período de interesse é definido utilizando índices relativos por meio dos parâmetros start e end:
 
->>f = besm.load(start=0, end=10)
+>>>f = besm.load(start=0, end=10)
 
 O índice 0 corresponde ao primeiro registro disponível da previsão a partir da data inicial informada pelo modelo. Já o índice 10 define o limite final do período a ser carregado.
 
@@ -97,8 +97,8 @@ Uma vez que o modelo é inicializado, suas informações são exibidas automatic
 
 .. code-block:: python
 
-  >>>import besm.CPTEC_BESM as BESM 
-  >>>besm = BESM.model()
+  import besm.CPTEC_BESM as BESM 
+  besm = BESM.model()
 
   Brazilian Earth System Model - ATMOS (TQ0062L042)
 
