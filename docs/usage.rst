@@ -91,25 +91,9 @@ Valores padrão
 
 Caso as opções não sejam informadas, o comando utiliza os seguintes valores padrão:
 
-| Opção        | Valor padrão           | Descrição                        |
-|--------------|------------------------|----------------------------------|
-| ``--date``   | Data atual             |  Data de inicialização do modelo |
-| ``--start``  | Data da análise        | Início do período de dados       |
-| ``--end``    | 10 dias após a análise | Final do período de dados        |
-
-
-:::{table} Table caption
-:width: 65
-:widths: auto
-:align: center
-
-| Header One   | Header Two     | Header Three    |
-| :----------- | :------------: | --------------: |
-| Nulla 1      | Lacus 2        | Hendrerit 3     |
-| Dignissim 11 | Morbi 12       | Pellentesque 13 |
-| Donec sit 21 | Ullamcorper 22 | Quis 23         |
-| Phasellus 31 | Ante 32        | Tempus 33       |
-:::
+.. image:: _static/TabelaValoresDefault.png
+   :width: 90%
+   :align: center
 
 
 
