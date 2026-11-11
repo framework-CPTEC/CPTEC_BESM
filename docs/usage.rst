@@ -56,8 +56,8 @@ Dessa forma:
 As opções ``--date``, ``--start`` e ``--end`` permitem definir a condição inicial do modelo e o período de dados que será carregado.
 
 - ``--date``, ``-d DATE``: define a data de inicialização do modelo, no formato `YYYYMMDD` ou `YYYYMMDDHH`. Essa data identifica a condição inicial (*initial condition*) utilizada na execução do modelo.
-- `--start`, `-s START`: define o início do período de dados a ser carregado. Pode receber um valor inteiro, entre `0` e `395`, representando o número de dias ou passos relativos à inicialização, ou uma data explícita no formato `YYYYMMDD` ou `YYYYMMDDHH`. O valor `0` corresponde à própria data de inicialização do modelo.
-- ``--end``, ``-r END``: define o final do período de dados a ser carregado. Aceita valores entre `0` e `395`, relativos à data de inicialização, ou uma data explícita no formato `YYYYMMDD` ou `YYYYMMDDHH`.
+- `--start`, `-s START`: define o início do período de dados a ser carregado. Pode receber um valor inteiro, entre `0` e `395`, representando o número de dias ou passos relativos à inicialização, ou uma data explícita no formato `YYYYMMDD`. O valor `0` corresponde à própria data de inicialização do modelo.
+- ``--end``, ``-e END``: define o final do período de dados a ser carregado. Aceita valores entre `0` e `395`, relativos à data de inicialização, ou uma data explícita no formato `YYYYMMDD`.
 
 Quando ``--start`` e ``--end`` são informados como valores numéricos, eles representam o intervalo relativo à data de inicialização do modelo. Por exemplo, ``--start 0 --end 10`` seleciona o período desde a inicialização até 10 dias após essa data.
 
@@ -98,12 +98,18 @@ Caso as opções não sejam informadas, o comando utiliza os seguintes valores p
 | ``--end``    | 10 dias após a análise | Final do período de dados        |
 
 
-| Item              | In Stock | Price |
-| :---------------- | :------: | ----: |
-| Python Hat        |   True   | 23.99 |
-| SQL Hat           |   True   | 23.99 |
-| Codecademy Tee    |  False   | 19.99 |
-| Codecademy Hoodie |  False   | 42.99 |
+:::{table} Table caption
+:width: 65
+:widths: auto
+:align: center
+
+| Header One   | Header Two     | Header Three    |
+| :----------- | :------------: | --------------: |
+| Nulla 1      | Lacus 2        | Hendrerit 3     |
+| Dignissim 11 | Morbi 12       | Pellentesque 13 |
+| Donec sit 21 | Ullamcorper 22 | Quis 23         |
+| Phasellus 31 | Ante 32        | Tempus 33       |
+:::
 
 
 
