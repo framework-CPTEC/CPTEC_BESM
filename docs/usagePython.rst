@@ -29,48 +29,48 @@ Esses parâmetros podem ser informados de duas formas:
 - Datas completas no formato YYYYMMDD.
 
 Exemplo de código para a leitura e filtragem de período temporal por índice relativo.
-
->>> import besm.CPTEC_BESM as BESM
->>> besm = BESM.model()
-#### Brazilian Earth System Model - ATMOS (TQ0062L042) #####
-Forecast data available for reading between 20261101 and 20261111.
-Surface variables: ['topo', 'lsmk', 'amdl', 'amsl', 'ussl', 'uzrs', 'uzds', 'psmt', 'usmt', 'vsmt', 'spmt', 'tsmt', 'rsmt', 'pcmt', 'prec', 'prcv', 'neve', 'rnof', 'pitp', 'cssf', 'clsf', 'evap', 'cbnv', 'olis', 'oles', 'role', 'iswf', 'ocis', 'oces', 'roce', 'swae', 'ocas', 'olic', 'lwtc', 'ocic', 'swgc', 'swtc', 'saea', 'nlwb', 'tdst', 'tgsc', 'tcas', 't2mt', 'q2mt', 'u10t', 'v10t', 'w100', 'd100'].
-Level variables:   ['uvmt', 'vvmt', 'ghmt', 'atmt', 'rhmt', 'shmt', 'omtm', 'lwrh', 'swrh', 'cvlh', 'cvms', 'vdcc', 'tke2'].
-levels (hPa): ['1000', '925', '850', '775', '700', '500', '400', '300', '250', '200', '150', '100', '70', '50', '30', '20', '10', '3'].
->>> f = besm.load(start=0, end=10)
-Building request
-Start: 20261111 - End: 20261121
-Period: 20261111 - 20261121
-Forecast records: 10
-Requested data: 0.70 MB
-20261112: 0.07 MB, Time: 4.61s, Speed: 0.02 MB/s                                                                                                       
-20261113: 0.07 MB, Time: 4.59s, Speed: 0.02 MB/s                                                                                                       
-20261114: 0.07 MB, Time: 4.59s, Speed: 0.02 MB/s                                                                                                       
-20261115: 0.07 MB, Time: 4.65s, Speed: 0.02 MB/s                                                                                                       
-20261116: 0.07 MB, Time: 4.58s, Speed: 0.02 MB/s                                                                                                       
-20261117: 0.07 MB, Time: 4.61s, Speed: 0.02 MB/s                                                                                                       
-20261118: 0.07 MB, Time: 4.59s, Speed: 0.02 MB/s                                                                                                       
-20261119: 0.07 MB, Time: 4.63s, Speed: 0.02 MB/s                                                                                                       
-20261120: 0.07 MB, Time: 4.60s, Speed: 0.02 MB/s                                                                                                       
-20261121: 0.07 MB, Time: 4.60s, Speed: 0.02 MB/s                                                                                                       
-Download total: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 737k/737k [00:46<00:00, 16.0kB/s]
->>> f
-<xarray.Dataset> Size: 740kB
-Dimensions:  (time: 10, lat: 96, lon: 192)
-Coordinates:
+.. code-block:: python
+  import besm.CPTEC_BESM as BESM
+  besm = BESM.model()
+  #### Brazilian Earth System Model - ATMOS (TQ0062L042) #####
+  Forecast data available for reading between 20261101 and 20261111.
+  Surface variables: ['topo', 'lsmk', 'amdl', 'amsl', 'ussl', 'uzrs', 'uzds', 'psmt', 'usmt', 'vsmt', 'spmt', 'tsmt', 'rsmt', 'pcmt', 'prec', 'prcv',         'neve', 'rnof', 'pitp', 'cssf', 'clsf', 'evap', 'cbnv', 'olis', 'oles', 'role', 'iswf', 'ocis', 'oces', 'roce', 'swae', 'ocas', 'olic', 'lwtc', 'ocic',     'swgc', 'swtc', 'saea', 'nlwb', 'tdst', 'tgsc', 'tcas', 't2mt', 'q2mt', 'u10t', 'v10t', 'w100', 'd100'].
+  Level variables:   ['uvmt', 'vvmt', 'ghmt', 'atmt', 'rhmt', 'shmt', 'omtm', 'lwrh', 'swrh', 'cvlh', 'cvms', 'vdcc', 'tke2'].
+  levels (hPa): ['1000', '925', '850', '775', '700', '500', '400', '300', '250', '200', '150', '100', '70', '50', '30', '20', '10', '3'].
+  f = besm.load(start=0, end=10)
+  Building request
+  Start: 20261111 - End: 20261121
+  Period: 20261111 - 20261121
+  Forecast records: 10
+  Requested data: 0.70 MB
+  20261112: 0.07 MB, Time: 4.61s, Speed: 0.02 MB/s                                                                                                       
+  20261113: 0.07 MB, Time: 4.59s, Speed: 0.02 MB/s                                                                                                       
+  20261114: 0.07 MB, Time: 4.59s, Speed: 0.02 MB/s                                                                                                       
+  20261115: 0.07 MB, Time: 4.65s, Speed: 0.02 MB/s                                                                                                       
+  20261116: 0.07 MB, Time: 4.58s, Speed: 0.02 MB/s                                                                                                       
+  20261117: 0.07 MB, Time: 4.61s, Speed: 0.02 MB/s                                                                                                       
+  20261118: 0.07 MB, Time: 4.59s, Speed: 0.02 MB/s                                                                                                       
+  20261119: 0.07 MB, Time: 4.63s, Speed: 0.02 MB/s                                                                                                       
+  20261120: 0.07 MB, Time: 4.60s, Speed: 0.02 MB/s                                                                                                       
+  20261121: 0.07 MB, Time: 4.60s, Speed: 0.02 MB/s                                                                                                       
+  Download total: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 737k/737k [00:46<00:00, 16.0kB/s]
+  >>> f
+  <xarray.Dataset> Size: 740kB
+  Dimensions:  (time: 10, lat: 96, lon: 192)
+  Coordinates:
   * time     (time) datetime64[ns] 80B 2026-11-12 2026-11-13 ... 2026-11-21
   * lat      (lat) float64 768B -88.57 -86.72 -84.86 -83.0 ... 84.86 86.72 88.57
   * lon      (lon) float64 2kB 0.0 1.875 3.75 5.625 ... 352.5 354.4 356.2 358.1
-Data variables:
+  Data variables:
     TSMT     (time, lat, lon) float32 737kB dask.array<chunksize=(1, 96, 192), meta=np.ndarray>
->>> 
+  >>> 
 
 
 **Explicação do exemplo**
 
 Neste exemplo, o período de interesse é definido utilizando índices relativos por meio dos parâmetros start e end:
 
-f = besm.load(start=0, end=10)
+>>f = besm.load(start=0, end=10)
 
 O índice 0 corresponde ao primeiro registro disponível da previsão a partir da data inicial informada pelo modelo. Já o índice 10 define o limite final do período a ser carregado.
 
@@ -84,7 +84,7 @@ Utilizar índices relativos é uma forma prática de selecionar períodos com ba
 
 Resultado equivalente utilizando **datas explícitas**:
 
-f = besm.load(start="20261111", end="20261121")
+>>f = besm.load(start="20261111", end="20261121")
 
 Nesse caso, o período é definido diretamente pelas datas de início e fim, produzindo o mesmo intervalo temporal representado pelos índices relativos utilizados no exemplo anterior.
 
@@ -96,22 +96,22 @@ Uma vez que o modelo é inicializado, suas informações são exibidas automatic
 
 .. code-block:: python
 
->>>import besm.CPTEC_BESM as BESM 
->>>besm = BESM.model()
+  >>>import besm.CPTEC_BESM as BESM 
+  >>>besm = BESM.model()
 
-Brazilian Earth System Model - ATMOS (TQ0062L042)
+  Brazilian Earth System Model - ATMOS (TQ0062L042)
 
-Forecast data available for reading between 20261031 and 20261110.
+  Forecast data available for reading between 20261031 and 20261110.
 
-Surface variables: ['topo', 'lsmk', 'amdl', ..., 't2mt', 'q2mt', 'u10t', 'v10t', 'w100', 'd100']
+  Surface variables: ['topo', 'lsmk', 'amdl', ..., 't2mt', 'q2mt', 'u10t', 'v10t', 'w100', 'd100']
 
-Level variables: ['uvmt', 'vvmt', 'ghmt', 'atmt', 'rhmt', 'shmt', 'omtm', 'lwrh', 'swrh', 'cvlh', 'cvms', 'vdcc', 'tke2']
+  Level variables: ['uvmt', 'vvmt', 'ghmt', 'atmt', 'rhmt', 'shmt', 'omtm', 'lwrh', 'swrh', 'cvlh', 'cvms', 'vdcc', 'tke2']
 
-levels (hPa): ['1000', '925', '850', '775', '700', '500', '400', '300', '250', '200', '150', '100', '70', '50', '30', '20', '10', '3']
+  levels (hPa): ['1000', '925', '850', '775', '700', '500', '400', '300', '250', '200', '150', '100', '70', '50', '30', '20', '10', '3']
 
-Variables at the surface: ['topo', 'lsmk', ..., 't2mt', 'q2mt', 'u10t', 'v10t']
+  Variables at the surface: ['topo', 'lsmk', ..., 't2mt', 'q2mt', 'u10t', 'v10t']
 
-Variables at pressure levels: ['uvmt', 'vvmt', 'ghmt', 'atmt', 'rhmt', 'shmt', ...]
+  Variables at pressure levels: ['uvmt', 'vvmt', 'ghmt', 'atmt', 'rhmt', 'shmt', ...]
 
 
 Descrição das Variáveis
