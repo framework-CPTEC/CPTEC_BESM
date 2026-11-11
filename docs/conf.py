@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'MONAN'
+project = 'BESM'
 copyright = '2024, FrameWork CPTEC'
 author = 'FrameWork CPTEC'
 
