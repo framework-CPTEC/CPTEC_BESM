@@ -82,6 +82,7 @@ Também é possível definir o intervalo em relação à inicialização do mode
 
 Nesse caso, os dados são carregados desde a data de inicialização (10/11/2026) até 10 dias após essa data.
 
+**Observação:** os valores relativos de ``--start`` e ``--end`` devem estar entre `0` e `395`, respeitando o período de dados disponível para a inicialização selecionada.
 
 Valores padrão
 --------------
@@ -100,7 +101,6 @@ Assim, é possível executar o comando sem informar essas opções, utilizando a
   besm_load --var t2mt
 
 
-**Observação:** os valores relativos de ``--start`` e ``--end`` devem estar entre `0` e `395`, respeitando o período de dados disponível para a inicialização selecionada.
 
 
 
