@@ -248,12 +248,6 @@ Ler Dados do BESM
 
 O pacote BESM oferece duas formas principais de leitura de dados:
 
-**load_shape**
-
-Utilizado quando se deseja aplicar um recorte espacial nos dados.
-
-Permite selecionar áreas específicas (estados, países, regiões, continentes, bacias ou biomas) utilizando abreviações de shape.
-
 **load**
 
 Utilizado para recuperar dados sem recorte espacial, abrangendo todo o domínio disponível.
@@ -276,6 +270,12 @@ Requested data: 4.22 MB
 20261120: 0.42 MB, Time: 21.38s, Speed: 0.02 MB/s                                                                                                      
 Download total: 100%|█████████████████████████████████████████████████████████████████████████████████████████████| 4.42M/4.42M [03:07<00:00, 23.6kB/s]
 >>> 
+
+**load_shape**
+
+Utilizado quando se deseja aplicar um recorte espacial nos dados.
+
+Permite selecionar áreas específicas (estados, países, regiões, continentes, bacias ou biomas) utilizando abreviações de shape.
 
 
 Salvando arquivos NetCDF por período com save_by_period
