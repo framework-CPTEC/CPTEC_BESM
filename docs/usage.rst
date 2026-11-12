@@ -48,7 +48,7 @@ A contagem dos *steps* começa em `0`, que corresponde à data e ao horário de 
 As opções ``--date``, ``--start`` e ``--end`` permitem definir a condição inicial do modelo e o período de dados que será carregado.
 
 - ``--date``, ``-d DATE``: define a data de inicialização do modelo, no formato `YYYYMMDD`. Essa data identifica a condição inicial (*initial condition*) utilizada na execução do modelo.
-- ``--start`, ``-s START`: define o início do período de dados a ser carregado. Pode receber um valor inteiro, entre `0` e `395`, representando o número de dias ou passos relativos à inicialização, ou uma data explícita no formato `YYYYMMDD`. O valor `0` corresponde à própria data de inicialização do modelo.
+- ``--start``, ``-s START``: define o início do período de dados a ser carregado. Pode receber um valor inteiro, entre `0` e `395`, representando o número de dias ou passos relativos à inicialização, ou uma data explícita no formato `YYYYMMDD`. O valor `0` corresponde à própria data de inicialização do modelo.
 - ``--end``, ``-e END``: define o final do período de dados a ser carregado. Aceita valores entre `0` e `395`, relativos à data de inicialização, ou uma data explícita no formato `YYYYMMDD`.
 
 Dessa forma:
