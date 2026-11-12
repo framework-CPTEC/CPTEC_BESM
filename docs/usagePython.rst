@@ -17,6 +17,31 @@ Data de Inicialização do BESM
 
 Para saber mais detalhes sobre o uso da opção date, consultar `Data de Inicialização <usage.html##horarios-de-inicializacao-do-modelo-besm-componente-atmosferico>`_
 
+Exemplo de código para a leitura e filtragem de dados do MONAN.
+
+.. code-block:: console
+
+  # Import para o modelo BESM
+  import besm.CPTEC_BESM as BESM
+
+  # Durante a inicialização do construtor informações sobre os dados são exibidas
+  # Entre elas informações de variaveis, niveis e frequência disponiveis para consulta
+
+  besm = BESM.model()
+
+  # Data da IC
+  # Trocar pela data atual ou consultar dataserver do CPTEC
+  date = '20261110'
+
+  # Variaveis 
+  vars = ['t2mt','prec']
+
+  # Utizando o método load
+  f = besm.load(date=date, var=vars)
+  
+  # Imprimir os valores recuperados
+  print(f)
+
 
 Período Temporal
 ----------------
