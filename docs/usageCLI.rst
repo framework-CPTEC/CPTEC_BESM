@@ -146,7 +146,7 @@ Exemplos de uso
 
   besm_load --date 20261110 --var t2mt prec --start 0 --end 12 --shape estados_sp
 
-**Baixar variáveis de niveis (1000/850)**
+**Baixar variáveis de níveis (1000/850)**
 
 .. code-block:: shell
 
