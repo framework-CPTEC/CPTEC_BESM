@@ -45,22 +45,18 @@ O modelo **BESM** gera saídas em intervalos regulares de tempo, com frequência
 
 A contagem dos *steps* começa em `0`, que corresponde à data e ao horário de inicialização do modelo. A partir desse ponto, cada passo representa o estado previsto para o dia seguinte.
 
+As opções ``--date``, ``--start`` e ``--end`` permitem definir a condição inicial do modelo e o período de dados que será carregado.
+
+- ``--date``, ``-d DATE``: define a data de inicialização do modelo, no formato `YYYYMMDD`. Essa data identifica a condição inicial (*initial condition*) utilizada na execução do modelo.
+- ``--start`, ``-s START`: define o início do período de dados a ser carregado. Pode receber um valor inteiro, entre `0` e `395`, representando o número de dias ou passos relativos à inicialização, ou uma data explícita no formato `YYYYMMDD`. O valor `0` corresponde à própria data de inicialização do modelo.
+- ``--end``, ``-e END``: define o final do período de dados a ser carregado. Aceita valores entre `0` e `395`, relativos à data de inicialização, ou uma data explícita no formato `YYYYMMDD`.
+
 Dessa forma:
 
 - ``--start 0`` - seleciona a saída correspondente à condição inicial do modelo.
 - ``--start 1`` - seleciona a previsão para 24 horas após a inicialização.
 - ``--start 2`` - seleciona a previsão para 48 horas após a inicialização.
 - ``--end 10`` - define o limite final do período em 10 dias de previsão (240 horas após a inicialização).
-
-
-As opções ``--date``, ``--start`` e ``--end`` permitem definir a condição inicial do modelo e o período de dados que será carregado.
-
-- ``--date``, ``-d DATE``: define a data de inicialização do modelo, no formato `YYYYMMDD`. Essa data identifica a condição inicial (*initial condition*) utilizada na execução do modelo.
-- `--start`, `-s START`: define o início do período de dados a ser carregado. Pode receber um valor inteiro, entre `0` e `395`, representando o número de dias ou passos relativos à inicialização, ou uma data explícita no formato `YYYYMMDD`. O valor `0` corresponde à própria data de inicialização do modelo.
-- ``--end``, ``-e END``: define o final do período de dados a ser carregado. Aceita valores entre `0` e `395`, relativos à data de inicialização, ou uma data explícita no formato `YYYYMMDD`.
-
-Quando ``--start`` e ``--end`` são informados como valores numéricos, eles representam o intervalo relativo à data de inicialização do modelo.
-Por exemplo, ``--start 0 --end 10`` seleciona o período desde a inicialização até 10 dias após essa data.
 
 Exemplos de uso
 ---------------
