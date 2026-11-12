@@ -44,19 +44,20 @@ Controle do período temporal
 
   Define a data inicial do período a ser carregado.
 
-Pode ser informada como:
+  Pode ser informada como:
 
-- índice temporal (ex.: 0)
-- data completa no formato YYYYMMDD
+    - índice temporal (ex.: 0)
+    - data completa no formato YYYYMMDD
+
 
 - ``--end END, -e END``
 
   Define a data final do período a ser carregado.
 
-Pode ser informada como:
+  Pode ser informada como:
 
-- índice temporal (ex.: 10)
-- data completa no formato YYYYMMDD
+    - índice temporal (ex.: 10)
+    - data completa no formato YYYYMMDD
 
 Variáveis e níveis
 ------------------
@@ -65,15 +66,15 @@ Variáveis e níveis
 
   Variáveis a carregar.
 
-Exemplo: ``--var t2mt atmt``
+  Exemplo: ``--var t2mt atmt``
 
 
 - ``--level LEVEL [LEVEL ...], -l LEVEL [LEVEL ...]``
 
   Níveis atmosféricos a carregar.
 
+  Exemplo: ``--level 1000 850``
 
-Exemplo: ``--level 1000 850``
 
 - ``--list_levels``
 
@@ -92,13 +93,14 @@ Exemplo: ``--level 1000 850``
 
   Define a abreviação da área (shape).
 
-Exemplo: ``--shape estados_sp``
+  Exemplo: ``--shape estados_sp``
+
 
 - ``--list_areas`` {continentes/paises/regioes/estados/bacias/biomas}
 
   Lista as áreas disponíveis por categoria.
 
-Exemplo: ``--list_areas estados``
+  Exemplo: ``--list_areas estados``
 
 
 Saída / Output arquivo
@@ -110,7 +112,8 @@ Saída / Output arquivo
 
   Valor padrão: BESM
 
-Exemplo: ``--prefix MEUARQUIVO``
+  Exemplo: ``--prefix MEUARQUIVO``
+
 
 - ``--path PATH, -o PATH``
 
@@ -118,7 +121,8 @@ Exemplo: ``--prefix MEUARQUIVO``
 
   Valor padrão: diretório atual.
 
-Exemplo: ``--path ./dados``
+  Exemplo: ``--path ./dados``
+
 
 - ``--frequency {day,month,all}``
 
@@ -140,22 +144,23 @@ Exemplos de uso
 
 .. code-block:: shell
 
-  besm_load --date 20261110 --var t2mt prect --start 0 --end 12 --shape estados_sp
+  besm_load --date 20261110 --var t2mt prec --start 0 --end 12 --shape estados_sp
 
 **Baixar variáveis de niveis (1000/850)**
 
 .. code-block:: shell
 
-  besm_load --date 20261110 --var atmt shum --level 1000 850 --start 0 --end 12
+  besm_load --date 20261110 --var atmt rhmt --level 1000 850 --start 0 --end 12
 
 
 .. code-block:: shell
+
   besm_load --date 20261110--var t2mt --start 20260101 --end 20261231
 
 
 .. warning::
 
-  É possível solicitar, em um mesmo pedido, variáveis de superfície e variáveis de níveis atmosféricos. Dessa forma, diferentes tipos de dados do BESM podem ser combinados em uma única requisição.
+  É possível solicitar, em um mesmo pedido, variáveis de superfície e variáveis de níveis atmosféricos. Dessa forma,  diferentes tipos de dados do BESM podem ser combinados em uma única requisição.
 
 .. warning::
 
