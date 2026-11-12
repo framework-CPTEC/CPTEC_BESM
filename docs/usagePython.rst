@@ -26,7 +26,6 @@ Exemplo de código para a leitura e filtragem de dados do MONAN.
 
   # Durante a inicialização do construtor informações sobre os dados são exibidas
   # Entre elas informações de variaveis, niveis e frequência disponiveis para consulta
-
   besm = BESM.model()
 
   # Data da IC
