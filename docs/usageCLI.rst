@@ -164,6 +164,6 @@ Exemplos de uso
 
 .. warning::
 
-  ``--date 20261110`` - Trocar por uma data disponível ou consultar as datas existentes no Dataserver do CPTEC.
+  ``--date 20261110`` - Trocar por uma data disponível ou consultar as datas existentes no `Dataserver CPTEC <https://dataserver.cptec.inpe.br/dataserver_modelos/besm/brutos/>`_.
 
   
