@@ -252,3 +252,83 @@ Requested data: 4.22 MB
 20261120: 0.42 MB, Time: 21.38s, Speed: 0.02 MB/s                                                                                                      
 Download total: 100%|█████████████████████████████████████████████████████████████████████████████████████████████| 4.42M/4.42M [03:07<00:00, 23.6kB/s]
 >>> 
+
+
+Salvando arquivos NetCDF por período com save_by_period
+-------------------------------------------------------
+
+O método save_by_period() permite salvar um xarray.Dataset retornado pelo BESM em arquivos NetCDF (.nc) agrupados por período de tempo. É uma forma conveniente de organizar os resultados da previsão para posterior processamento, arquivamento ou distribuição.
+
+help do método
+
+>>> help(besm.save_by_period)
+
+Exemplo de leitura dos dados
+
+.. code-block:: python
+
+  import besm.CPTEC_BESM as BESM
+  besm = BESM.model()
+  f = besm.load(start=0, end=10)
+  print(f)
+
+Resultado:
+
+.. code-block:: python
+  <xarray.Dataset>
+  Dimensions: (time: 10, lat: 96, lon: 192)
+ 
+  Coordinates:
+  * time (time) datetime64[ns] 2026-11-13 ... 2026-11-22
+  * lat (lat) float64 -88.57 ... 88.57
+  * lon (lon) float64 0.0 ... 358.1
+ 
+  Data variables:
+  TSMT (time, lat, lon) float32
+ 
+- Salvamento padrão (frequency="day")
+
+O valor padrão de frequency é "day". Portanto, basta chamar o método informando apenas o dataset:
+
+.. code-block:: python
+
+  arquivos = besm.save_by_period(f)
+  print(arquivos)
+
+Resultado:
+
+.. code-block:: python
+
+  [
+  './BESM_20261112_20261113.nc',
+  './BESM_20261112_20261114.nc',
+  './BESM_20261112_20261115.nc',
+  './BESM_20261112_20261116.nc',
+  './BESM_20261112_20261117.nc',
+  './BESM_20261112_20261118.nc',
+  './BESM_20261112_20261119.nc',
+  './BESM_20261112_20261120.nc',
+  './BESM_20261112_20261121.nc',
+  './BESM_20261112_20261122.nc'
+  ]
+
+- Salvamento de todo o período (frequency="all")
+
+Caso seja desejado gerar apenas um arquivo contendo todos os registros carregados, utilize a opção frequency="all".
+
+.. code-block:: python
+
+  arquivos = besm.save_by_period(f, frequency="all")
+  print(arquivos)
+
+Resultado:
+
+.. code-block:: python
+
+  [
+  './BESM_20261112_20261113_20261122.nc'
+  ]
+
+
+
+
