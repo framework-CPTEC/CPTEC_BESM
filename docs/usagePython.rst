@@ -15,7 +15,7 @@ Biblioteca Python
 Data de Inicialização do BESM
 -----------------------------
 
-Para saber mais detalhes sobre o uso da opção date, consultar `Data de Inicialização <usage.html#horarios-de-inicializacao-do-modelo-besm>`_
+Para saber mais detalhes sobre o uso da opção date, consultar `Data de Inicialização <usage.html##horarios-de-inicializacao-do-modelo-besm-componente-atmosferico>`_
 
 
 Período Temporal
@@ -71,7 +71,7 @@ Exemplo de código para a leitura e filtragem de período temporal por índice r
 
 Neste exemplo, o período de interesse é definido utilizando índices relativos por meio dos parâmetros start e end:
 
->>>f = besm.load(start=0, end=10)
+>>> f = besm.load(start=0, end=10)
 
 O índice 0 corresponde ao primeiro registro disponível da previsão a partir da data inicial informada pelo modelo. Já o índice 10 define o limite final do período a ser carregado.
 
@@ -85,7 +85,7 @@ Utilizar índices relativos é uma forma prática de selecionar períodos com ba
 
 Resultado equivalente utilizando **datas explícitas**:
 
->>f = besm.load(start="20261111", end="20261121")
+>>> f = besm.load(start="20261111", end="20261121")
 
 Nesse caso, o período é definido diretamente pelas datas de início e fim, produzindo o mesmo intervalo temporal representado pelos índices relativos utilizados no exemplo anterior.
 
